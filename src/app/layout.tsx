@@ -13,13 +13,11 @@ const tsangerJinKai03 = localFont({
       path: "../../public/fonts/tsangerJinKai03-W04.ttf",
       weight: "400",
       style: "normal",
-      variable: "--font-tsangerJinKai03",
     },
     {
       path: "../../public/fonts/tsangerJinKai03-W05.ttf",
       weight: "700",
       style: "medium",
-      variable: "--font-tsangerJinKai03",
     },
   ],
 });
