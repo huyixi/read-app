@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 const tsangerJinKai03 = localFont({
   src: [
     {
-      path: "../../public/fonts/tsangerJinKai03-W04.ttf",
+      path: "../../public/fonts/tsangerJinKai03-W04.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/tsangerJinKai03-W05.ttf",
+      path: "../../public/fonts/tsangerJinKai03-W05.woff2",
       weight: "700",
       style: "medium",
     },
