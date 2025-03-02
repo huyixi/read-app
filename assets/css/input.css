@@ -1,1 +1,26 @@
+@font-face {
+    font-family: "JinKai";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/tsangerJinKai03-W04.woff2") format("woff2");
+}
+@font-face {
+    font-family: "JinKai";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/tsangerJinKai03-W05.woff2") format("woff2");
+}
+
 @import "tailwindcss";
+
+@theme {
+    --font-body: JinKai, system-ui, sans-serif;
+}
+
+@layer base {
+    body {
+        @apply font-body;
+    }
+}

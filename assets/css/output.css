@@ -1,4 +1,18 @@
 /*! tailwindcss v4.0.9 | MIT License | https://tailwindcss.com */
+@font-face {
+  font-family: "JinKai";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/tsangerJinKai03-W04.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JinKai";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/tsangerJinKai03-W05.woff2") format("woff2");
+}
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -6,10 +20,6 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-blue-500: oklch(0.623 0.214 259.815);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -27,6 +37,7 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --font-body: JinKai, system-ui, sans-serif;
   }
 }
 @layer base {
@@ -198,6 +209,9 @@
   .isolate {
     isolation: isolate;
   }
+  .z-3 {
+    z-index: 3;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -310,19 +324,11 @@
   .text-justify {
     text-align: justify;
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
+  .font-body {
+    font-family: var(--font-body);
   }
   .break-all {
     word-break: break-all;
-  }
-  .text-blue-500 {
-    color: var(--color-blue-500);
   }
   .capitalize {
     text-transform: capitalize;
@@ -401,6 +407,11 @@
     keywords: node-addon-api;
   }
 }
+@layer base {
+  body {
+    font-family: var(--font-body);
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
@@ -430,10 +441,6 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
-}
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
 }
 @property --tw-shadow {
   syntax: "*";
