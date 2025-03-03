@@ -1,0 +1,18 @@
+{{- $isDev := eq hugo.Environment "development" -}} {{- with resources.Get
+"css/style.scss" -}} {{- $style := . | toCSS -}} {{- $tailwindcss :=
+resources.Get "css/output.css" -}} {{- $combinedStyles := slice $tailwindcss
+$style | resources.Concat "css/combined.css" -}}
+<link
+    rel="stylesheet"
+    href="{{ if $isDev }}{{ $combinedStyles.RelPermalink }}{{ else }}{{ ($combinedStyles | minify | fingerprint).RelPermalink }}{{ end }}"
+    {{
+    if
+    not
+    $isDev
+    }}integrity="{{ ($combinedStyles | minify | fingerprint).Data.Integrity }}"
+    crossorigin="anonymous"
+    {{
+    end
+    }}
+/>
+{{- else -}} {{- errorf "style.scss resource not found" -}} {{- end -}}

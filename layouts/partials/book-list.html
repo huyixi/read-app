@@ -1,0 +1,4 @@
+<ul>
+    {{ range (where .Site.RegularPages "Section" "books") }} {{ partial
+    "book-item.html" . }} {{ end }}
+</ul>
