@@ -1,6 +1,6 @@
 {
-  "name": "huyixi's Read",
-  "short_name": "huyixi's Read",
+  "name": "阅读札记",
+  "short_name": "阅读札记",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,6 +16,6 @@
     }
   ],
   "theme_color": "#a01217",
-  "background_color": "#a01217",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
