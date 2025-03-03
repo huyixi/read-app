@@ -1,5 +1,0 @@
-<h2 class="list-title">全部书籍</h2>
-<ul>
-    {{ range (where .Site.RegularPages "Section" "books") }} {{ partial
-    "book-item.html" . }} {{ end }}
-</ul>
