@@ -212,9 +212,6 @@
   .isolate {
     isolation: isolate;
   }
-  .z-3 {
-    z-index: 3;
-  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
@@ -235,6 +232,18 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .mt-\[84px\] {
+    margin-top: 84px;
+  }
+  .mr-\[90px\] {
+    margin-right: 90px;
+  }
+  .mb-\[90px\] {
+    margin-bottom: 90px;
+  }
+  .ml-\[70px\] {
+    margin-left: 70px;
   }
   .block {
     display: block;
@@ -293,6 +302,12 @@
   .table-row-group {
     display: table-row-group;
   }
+  .h-screen {
+    height: 100vh;
+  }
+  .w-screen {
+    width: 100vw;
+  }
   .max-w-\[1200px\] {
     max-width: 1200px;
   }
@@ -335,9 +350,6 @@
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
-  }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
   }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
@@ -432,6 +444,7 @@
 @layer base {
   body {
     font-family: var(--font-body);
+    height: 100vh;
   }
 }
 @property --tw-rotate-x {

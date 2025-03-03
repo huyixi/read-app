@@ -1,3 +1,10 @@
 {{ define "main" }}
-<h1 class="text-3xl">{{ .Title }}</h1>
-{{ .Content }} {{ end }}
+<main class="page-x h-screen w-screen">
+    <article
+        class="article-x inline-block mb-[90px] ml-[70px] mr-[90px] mt-[84px]"
+    >
+        <h1 class="text-3xl">{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</main>
+{{ end }}

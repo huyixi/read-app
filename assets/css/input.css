@@ -22,5 +22,6 @@
 @layer base {
     body {
         @apply font-body;
+        height: 100vh;
     }
 }
