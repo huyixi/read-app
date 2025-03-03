@@ -2,6 +2,7 @@
 title: 怎样读书好
 date: 2025-03-03T14:12:20+08:00
 draft: false
+star: 3
 ---
 fdsaf寨啊
 
