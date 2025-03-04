@@ -8,6 +8,18 @@
   "outputs": {
     "home": {
       "formats": ["HTML", "RSS"]
+    },
+    "page": {
+      "formats": ["HTML", "RSS"]
+    },
+    "section": {
+      "formats": ["HTML", "RSS"]
+    },
+    "taxonomy": {
+      "formats": ["HTML", "RSS"]
+    },
+    "term": {
+      "formats": ["HTML", "RSS"]
     }
   }
 }
