@@ -4,22 +4,5 @@
   "title": "阅读札记",
   "params": {
     "subtitle": "一个人的思想发育史就是他的阅读史。"
-  },
-  "outputs": {
-    "home": {
-      "formats": ["HTML", "RSS"]
-    },
-    "page": {
-      "formats": ["HTML", "RSS"]
-    },
-    "section": {
-      "formats": ["HTML", "RSS"]
-    },
-    "taxonomy": {
-      "formats": ["HTML", "RSS"]
-    },
-    "term": {
-      "formats": ["HTML", "RSS"]
-    }
   }
 }
