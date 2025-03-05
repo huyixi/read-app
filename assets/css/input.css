@@ -17,8 +17,8 @@
 
 @theme {
     --font-body: JinKai, system-ui, sans-serif;
-    --color-theme: #9b7747;
-    --color-text-primary: #1f1f1f;
+    --color-theme: #f7f3e8;
+    --color-text-primary: #3a2221;
 }
 
 @layer base {
