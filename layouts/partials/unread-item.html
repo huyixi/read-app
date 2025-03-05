@@ -47,12 +47,12 @@
             <p class="book-item-title">{{ .LinkTitle }}</p>
         </div>
 
-        {{- if or .Params.recommander .Params.recommand -}}
+        {{- if or .Params.recommender .Params.recommend -}}
         <div class="book-item-info">
-            {{- with .Params.recommander -}}
+            {{- with .Params.recommender -}}
             <p class="book-item-recommander">{{.}}</p>
             {{- end -}}
-            {{- with .Params.recommand -}}
+            {{- with .Params.recommend -}}
             <p class="book-item-recommand">{{.}}</p>
             {{- end -}}
         </div>
