@@ -1,8 +1,9 @@
-<li class="book-item cursor-pointer inline-block">
-    <a href="{{ .RelPermalink }}"
-        class="inline-block bg-gray-50 rounded-lg overflow-hidden "
+<li class="book-item cursor-pointer inline-block max-w-120">
+    <a
+        href="{{ .RelPermalink }}"
+        class="inline-block bg-gray-50 rounded-lg overflow-hidden"
         aria-label="{{ .LinkTitle }}">
-        <div class="book-item-top flex items-center ">
+        <div class="book-item-top flex items-center">
             {{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}}
             {{- $webpDesktop := .Resize "1200x webp q80" -}}
             {{- $webpMobile := .Resize "600x webp q80" -}}
@@ -41,19 +42,16 @@
             </div>
             {{- end -}}
             <div class="book-info">
-
                 <p class="book-item-title text-xl">{{ .LinkTitle }}</p>
                 <p class="book-item-author">{{ .Params.author }}</p>
-
             </div>
         </div>
 
         {{- if or .Params.recommender .Params.recommendation -}}
-        <div class="book-item-info  bg-gray-200 p-6">
+        <div class="book-item-info bg-gray-200 p-6">
             {{- with .Params.recommender -}}
             <p class="book-item-recommander">{{.}}推荐：</p>
-            {{- end -}}
-            {{- with .Params.recommendation -}}
+            {{- end -}} {{- with .Params.recommendation -}}
             <p class="book-item-recommand">{{.}}</p>
             {{- end -}}
         </div>

@@ -1,7 +1,9 @@
 <section class="recent-list">
     <h2 class="list-title">最近阅读</h2>
     <ul class="book-list">
-        {{ range first 5 (where (sort .Site.RegularPages ".Date" "desc")
-        "Params.star" "!=" 0) }} {{partial "book-item.html" .}} {{ end }}
+        {{ range first 5 (where (where (sort .Site.RegularPages ".Date" "desc")
+        "Section" "books") "Params.star" "!=" 0) }}
+        {{partial "book-item.html" .}}
+        {{ end }}
     </ul>
 </section>
