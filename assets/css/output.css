@@ -217,6 +217,9 @@
   .isolate {
     isolation: isolate;
   }
+  .z-3 {
+    z-index: 3;
+  }
   .container {
     width: 100%;
     @media (width >= 40rem) {
