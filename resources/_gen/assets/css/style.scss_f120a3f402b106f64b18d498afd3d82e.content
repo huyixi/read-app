@@ -2,8 +2,7 @@
   margin: 1rem 0; }
   .book-list-x .list-title {
     font-size: 1.4rem;
-    margin: 0.4rem 0;
-    color: var(--color-brand-primary); }
+    margin: 0.4rem 0; }
 
 .book-cover {
   position: relative; }
