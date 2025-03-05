@@ -23,10 +23,14 @@
     --color-gray-50: oklch(0.985 0.002 247.839);
     --color-gray-200: oklch(0.928 0.006 264.531);
     --spacing: 0.25rem;
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --radius-lg: 0.5rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -46,7 +50,8 @@
       --font-mono--font-variation-settings
     );
     --font-body: JinKai, system-ui, sans-serif;
-    --color-theme: #f7f3e8;
+    --color-brand-primary: #a97f44;
+    --color-bg-primary: #f7f3e8;
     --color-text-primary: #3a2221;
   }
 }
@@ -225,9 +230,6 @@
   .isolate {
     isolation: isolate;
   }
-  .z-3 {
-    z-index: 3;
-  }
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -258,6 +260,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
   .block {
     display: block;
   }
@@ -281,6 +286,12 @@
   }
   .inline-block {
     display: inline-block;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
   }
   .table {
     display: table;
@@ -309,20 +320,14 @@
   .table-row-group {
     display: table-row-group;
   }
+  .h-0 {
+    height: calc(var(--spacing) * 0);
+  }
   .h-0\.5 {
     height: calc(var(--spacing) * 0.5);
   }
   .w-0 {
     width: calc(var(--spacing) * 0);
-  }
-  .max-w-60 {
-    max-width: calc(var(--spacing) * 60);
-  }
-  .max-w-80 {
-    max-width: calc(var(--spacing) * 80);
-  }
-  .max-w-100 {
-    max-width: calc(var(--spacing) * 100);
   }
   .max-w-120 {
     max-width: calc(var(--spacing) * 120);
@@ -344,6 +349,9 @@
   }
   .grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
   }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
@@ -382,8 +390,14 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .bg-\[var\(--color-theme\)\] {
-    background-color: var(--color-theme);
+  .bg-\[var\(--bg-primary\)\] {
+    background-color: var(--bg-primary);
+  }
+  .bg-\[var\(--color-bg-primary\)\] {
+    background-color: var(--color-bg-primary);
+  }
+  .bg-\[var\(--color-brand-primary\)\] {
+    background-color: var(--color-brand-primary);
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
@@ -397,8 +411,20 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
   .py-8 {
     padding-block: calc(var(--spacing) * 8);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
   }
   .text-justify {
     text-align: justify;
@@ -406,6 +432,14 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -515,8 +549,8 @@
 @layer base {
   body {
     font-family: var(--font-body);
-    min-height: 100vh;
     color: var(--color-text-primary);
+    min-height: 100vh;
   }
 }
 @property --tw-rotate-x {

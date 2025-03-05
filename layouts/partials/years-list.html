@@ -1,6 +1,6 @@
-<section class="history-list">
+<section class="book-list-x history-list">
     <h2 class="list-title">年度回顾</h2>
-    <ul>
+    <ul class="book-list">
         {{ range (where .Site.RegularPages "Section" "years") }} {{ partial
         "book-item.html" . }} {{ end }}
     </ul>

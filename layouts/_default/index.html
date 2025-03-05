@@ -4,10 +4,10 @@
         <h1 class="text-3xl inline-block">{{ .Site.Title }}</h1>
         <p>{{ .Site.Params.subtitle }}</p>
     </header>
-    <main class="container mx-auto max-w-[1200px] py-8">
+    <main class="container mx-auto max-w-[1200px] py-2">
         {{ partial "rencent-list.html" . }}{{ partial "masterpiece-list.html" .
         }}{{ partial "unread-list.html" . }} {{partial "history-list.html" .}}
         {{partial "years-list.html" .}}
     </main>
 </div>
-{{ end }}
+{{partial "site-footer.html" .}} {{ end }}
