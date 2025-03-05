@@ -2,6 +2,6 @@
     <h2 class="list-title">想读的书</h2>
     <ul class="book-list">
         {{ range where .Site.RegularPages "Params.star" "eq" 0 }} {{partial
-        "book-item.html" .}} {{ end }}
+        "unread-item.html" .}} {{ end }}
     </ul>
 </section>

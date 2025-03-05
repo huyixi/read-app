@@ -1,0 +1,61 @@
+<li class="book-item cursor-pointer inline-block">
+    <a href="{{ .RelPermalink }}" aria-label="{{ .LinkTitle }}">
+        <div class="book-item-top">
+            {{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}}
+            {{- $webpDesktop := .Resize "1200x webp q80" -}}
+            {{- $webpMobile := .Resize "600x webp q80" -}}
+            {{- $jpegDesktop := .Resize "1200x jpeg q80" -}}
+            {{- $jpegMobile := .Resize "600x jpeg q80" -}}
+            <div class="book-cover" style="width: 96px; height: 139px">
+                <picture>
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="{{ $webpMobile.RelPermalink }}"
+                        type="image/webp" />
+                    <source
+                        media="(max-width: 600px)"
+                        srcset="{{ $jpegMobile.RelPermalink }}"
+                        type="image/jpeg" />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="{{ $webpDesktop.RelPermalink }}"
+                        type="image/webp" />
+                    <source
+                        media="(min-width: 601px)"
+                        srcset="{{ $jpegDesktop.RelPermalink }}"
+                        type="image/jpeg" />
+                    <img
+                        class="book-item-cover-img"
+                        style="width: 96px; height: 139px"
+                        width="96"
+                        height="139"
+                        fetchpriority="high"
+                        decoding="async"
+                        src="{{$jpegDesktop.RelPermalink}}"
+                        alt="{{.Title | default $.Page.Title | plainify}} 封面"
+                        loading="lazy" />
+                </picture>
+                <span class="book-cover-decor"></span>
+            </div>
+            {{- else -}}
+            <div
+                class="book-cover book-cover-placeholder"
+                style="width: 96px; height: 139px">
+                <span class="book-cover-decor"></span>
+            </div>
+            {{- end -}}
+            <p class="book-item-title">{{ .LinkTitle }}</p>
+        </div>
+
+        {{- if or .Params.recommander .Params.recommand -}}
+        <div class="book-item-info">
+            {{- with .Params.recommander -}}
+            <p class="book-item-recommander">{{.}}</p>
+            {{- end -}}
+            {{- with .Params.recommand -}}
+            <p class="book-item-recommand">{{.}}</p>
+            {{- end -}}
+        </div>
+        {{- end -}}
+    </a>
+</li>
