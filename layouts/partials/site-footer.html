@@ -1,11 +1,10 @@
-<div class="copyright group cursor-pointer p-3">
+<div class="copyright inline-block group cursor-pointer p-3">
     &copy; 2025{{ if ne now.Year 2025 }}-{{ now.Year }}{{ end }}
-    <span class="relative inline-block">
+    <span class="relative inline-block group">
         <a href="https://huyixi.com"> {{ .Site.Params.author }}. </a>
         <span
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-rose-700 group-hover:w-full transition-all duration-300 ease-out"
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-theme)] group-hover:w-full transition-all duration-300 ease-out"
         ></span>
     </span>
-
     保留所有权利。
 </div>

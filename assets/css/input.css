@@ -17,11 +17,14 @@
 
 @theme {
     --font-body: JinKai, system-ui, sans-serif;
+    --color-theme: #9b7747;
+    --color-text-primary: #1f1f1f;
 }
 
 @layer base {
     body {
         @apply font-body;
-        height: 100vh;
+        min-height: 100vh;
+        @apply text-text-primary;
     }
 }
