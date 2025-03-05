@@ -1,7 +1,7 @@
 <section class="history-list">
     <h2 class="list-title">阅读历史</h2>
     <ul>
-        {{ range first 10 (where .Site.RegularPages "Section" "books") }} {{
-        partial "book-item.html" . }} {{ end }}
+        {{ range first 10 (where (where .Site.RegularPages "Section" "books")
+        "Params.star" "!=" 0) }} {{ partial "book-item.html" . }} {{ end }}
     </ul>
 </section>

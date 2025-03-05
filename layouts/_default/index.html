@@ -4,7 +4,7 @@
     <p>{{ .Site.Params.subtitle }}</p>
 </header>
 <main class="container mx-auto max-w-[1200px] py-8">
-    {{ partial "rencent-list.html" . }}{{ partial "masterpiece-list.html" . }}
-    {{partial "history-list.html" .}}
+    {{ partial "rencent-list.html" . }}{{ partial "masterpiece-list.html" . }}{{
+    partial "unread-list.html" . }} {{partial "history-list.html" .}}
 </main>
 {{ end }}
