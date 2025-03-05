@@ -26,7 +26,7 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  gap: 0.8rem; }
+  gap: 1rem; }
   .scrolling-x .scrolling-card {
     flex: 0 0 auto;
     scroll-snap-align: start; }
@@ -67,4 +67,5 @@ article p {
   /* Hide overflow */ }
 
 .unread-item {
-  width: calc(100vw - 3rem); }
+  width: calc(100vw - 3rem);
+  max-width: 400px; }
