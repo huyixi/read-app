@@ -1,10 +1,16 @@
 .book-list-x {
     margin: 1rem 0;
+    .list-title {
+        font-size: 1.4rem;
+        margin: 0.2rem 0;
+    }
+    .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
 }
-.list-title {
-    font-size: 1.4rem;
-    margin: 0.2rem 0;
-}
+
 .book-cover {
     position: relative;
 }

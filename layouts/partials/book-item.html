@@ -1,5 +1,5 @@
 <li class="book-item cursor-pointer inline-block">
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}" class="inline-block text-ellipsis">
         {{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}} {{-
         $webpDesktop := .Resize "1200x webp q80" -}} {{- $webpMobile := .Resize
         "600x webp q80" -}} {{- $jpegDesktop := .Resize "1200x jpeg q80" -}} {{-
