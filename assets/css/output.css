@@ -486,6 +486,9 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .\[hk\:xyS�\*rӗ\] {
+    hk: xyS�*rӗ;
+  }
   .\[keywords\:node-addon-api\] {
     keywords: node-addon-api;
   }
@@ -494,6 +497,11 @@
       @media (hover: hover) {
         width: 100%;
       }
+    }
+  }
+  .md\:p-4 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 4);
     }
   }
 }
