@@ -1,6 +1,6 @@
 <section class="book-list-x unread-list">
     <h2 class="list-title">想读的书</h2>
-    <ul class="book-list">
+    <ul class="book-list scrolling-x">
         {{ range where .Site.RegularPages "Params.star" "eq" 0 }} {{partial
         "unread-item.html" .}} {{ end }}
     </ul>

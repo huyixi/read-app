@@ -1,6 +1,6 @@
 <section class="book-list-x history-list">
     <h2 class="list-title">阅读历史</h2>
-    <ul class="book-list">
+    <ul class="book-list scrolling-x">
         {{ range first 10 (where (where .Site.RegularPages "Section" "books")
         "Params.star" "!=" 0) }} {{ partial "book-item.html" . }} {{ end }}
     </ul>

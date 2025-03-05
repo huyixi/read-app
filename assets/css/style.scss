@@ -4,11 +4,6 @@
         font-size: 1.4rem;
         margin: 0.2rem 0;
     }
-    .book-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.8rem;
-    }
 }
 
 .book-cover {
@@ -39,4 +34,15 @@
 }
 p {
     margin: 0.5rem 0;
+}
+.scrolling-x {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.8rem;
+    .scrolling-card {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+    }
 }

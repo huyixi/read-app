@@ -1,4 +1,4 @@
-<li class="book-item cursor-pointer inline-block">
+<li class="book-item cursor-pointer inline-block scrolling-card">
     <a href="{{ .RelPermalink }}" class="inline-block text-ellipsis">
         {{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}} {{-
         $webpDesktop := .Resize "1200x webp q80" -}} {{- $webpMobile := .Resize

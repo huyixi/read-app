@@ -1,32 +1,37 @@
-<li class="book-item cursor-pointer inline-block max-w-120">
+<li class="book-item cursor-pointer inline-block max-w-120 scrolling-card">
     <a
         href="{{ .RelPermalink }}"
         class="inline-block bg-gray-50 rounded-lg overflow-hidden"
-        aria-label="{{ .LinkTitle }}">
+        aria-label="{{ .LinkTitle }}"
+    >
         <div class="book-item-top flex items-center">
             {{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}}
-            {{- $webpDesktop := .Resize "1200x webp q80" -}}
-            {{- $webpMobile := .Resize "600x webp q80" -}}
-            {{- $jpegDesktop := .Resize "1200x jpeg q80" -}}
-            {{- $jpegMobile := .Resize "600x jpeg q80" -}}
+            {{- $webpDesktop := .Resize "600x webp q80" -}}
+            {{- $webpMobile := .Resize "300x webp q80" -}}
+            {{- $jpegDesktop := .Resize "600x jpeg q80" -}}
+            {{- $jpegMobile := .Resize "300x jpeg q80" -}}
             <div class="book-cover m-4" style="width: 96px; height: 139px">
                 <picture>
                     <source
                         media="(max-width: 600px)"
                         srcset="{{ $webpMobile.RelPermalink }}"
-                        type="image/webp" />
+                        type="image/webp"
+                    />
                     <source
                         media="(max-width: 600px)"
                         srcset="{{ $jpegMobile.RelPermalink }}"
-                        type="image/jpeg" />
+                        type="image/jpeg"
+                    />
                     <source
                         media="(min-width: 601px)"
                         srcset="{{ $webpDesktop.RelPermalink }}"
-                        type="image/webp" />
+                        type="image/webp"
+                    />
                     <source
                         media="(min-width: 601px)"
                         srcset="{{ $jpegDesktop.RelPermalink }}"
-                        type="image/jpeg" />
+                        type="image/jpeg"
+                    />
                     <img
                         class="book-item-cover-img"
                         style="width: 96px; height: 139px"
@@ -36,7 +41,8 @@
                         decoding="async"
                         src="{{$jpegDesktop.RelPermalink}}"
                         alt="{{.Title | default $.Page.Title | plainify}} 封面"
-                        loading="lazy" />
+                        loading="lazy"
+                    />
                 </picture>
                 <span class="book-cover-decor"></span>
             </div>
