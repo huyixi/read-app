@@ -1,6 +1,6 @@
+@charset "UTF-8";
 .book-list-x {
-  margin: 1rem 0;
-  color: var(--color-brand-primary); }
+  margin: 1rem 0; }
   .book-list-x .list-title {
     font-size: 1.4rem;
     margin: 0.4rem 0; }
@@ -45,3 +45,26 @@
 
 article p {
   margin: 0.5rem 0; }
+
+.truncate-1 {
+  display: -webkit-box;
+  /* Use WebKit’s box layout */
+  -webkit-box-orient: vertical;
+  /* Arrange child elements vertically */
+  -webkit-line-clamp: 1;
+  /* Show specified number of lines */
+  overflow: hidden;
+  /* Hide overflow */ }
+
+.truncate-3 {
+  display: -webkit-box;
+  /* Use WebKit’s box layout */
+  -webkit-box-orient: vertical;
+  /* Arrange child elements vertically */
+  -webkit-line-clamp: 3;
+  /* Show specified number of lines */
+  overflow: hidden;
+  /* Hide overflow */ }
+
+.unread-item {
+  width: calc(100vw - 3rem); }

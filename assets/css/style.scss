@@ -4,7 +4,6 @@
         font-size: 1.4rem;
         margin: 0.4rem 0;
     }
-    color: var(--color-brand-primary);
 }
 .book-cover {
     position: relative;
@@ -62,4 +61,23 @@
 
 article p {
     margin: 0.5rem 0;
+}
+
+@mixin truncate($lines) {
+    display: -webkit-box; /* Use WebKit’s box layout */
+    -webkit-box-orient: vertical; /* Arrange child elements vertically */
+    -webkit-line-clamp: $lines; /* Show specified number of lines */
+    overflow: hidden; /* Hide overflow */
+}
+
+.truncate-1 {
+    @include truncate(1);
+}
+
+.truncate-3 {
+    @include truncate(3);
+}
+
+.unread-item {
+    width: calc(100vw - 3rem);
 }
