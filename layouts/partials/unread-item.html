@@ -1,12 +1,14 @@
 <li class="book-item cursor-pointer inline-block">
-    <a href="{{ .RelPermalink }}" aria-label="{{ .LinkTitle }}">
-        <div class="book-item-top">
+    <a href="{{ .RelPermalink }}"
+        class="inline-block bg-gray-50 rounded-lg overflow-hidden "
+        aria-label="{{ .LinkTitle }}">
+        <div class="book-item-top flex items-center ">
             {{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}}
             {{- $webpDesktop := .Resize "1200x webp q80" -}}
             {{- $webpMobile := .Resize "600x webp q80" -}}
             {{- $jpegDesktop := .Resize "1200x jpeg q80" -}}
             {{- $jpegMobile := .Resize "600x jpeg q80" -}}
-            <div class="book-cover" style="width: 96px; height: 139px">
+            <div class="book-cover m-4" style="width: 96px; height: 139px">
                 <picture>
                     <source
                         media="(max-width: 600px)"
@@ -37,22 +39,21 @@
                 </picture>
                 <span class="book-cover-decor"></span>
             </div>
-            {{- else -}}
-            <div
-                class="book-cover book-cover-placeholder"
-                style="width: 96px; height: 139px">
-                <span class="book-cover-decor"></span>
-            </div>
             {{- end -}}
-            <p class="book-item-title">{{ .LinkTitle }}</p>
+            <div class="book-info">
+
+                <p class="book-item-title text-xl">{{ .LinkTitle }}</p>
+                <p class="book-item-author">{{ .Params.author }}</p>
+
+            </div>
         </div>
 
-        {{- if or .Params.recommender .Params.recommend -}}
-        <div class="book-item-info">
+        {{- if or .Params.recommender .Params.recommendation -}}
+        <div class="book-item-info  bg-gray-200 p-6">
             {{- with .Params.recommender -}}
-            <p class="book-item-recommander">{{.}}</p>
+            <p class="book-item-recommander">{{.}}推荐：</p>
             {{- end -}}
-            {{- with .Params.recommend -}}
+            {{- with .Params.recommendation -}}
             <p class="book-item-recommand">{{.}}</p>
             {{- end -}}
         </div>
