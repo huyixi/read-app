@@ -2,10 +2,10 @@
     margin: 1rem 0;
     .list-title {
         font-size: 1.4rem;
-        margin: 0.2rem 0;
+        margin: 0.4rem 0;
+        color: var(--color-brand-primary);
     }
 }
-
 .book-cover {
     position: relative;
 }
@@ -32,9 +32,7 @@
 .book-cover-decor::after {
     border-color: rgba(0, 0, 0, 0.1);
 }
-p {
-    margin: 0.5rem 0;
-}
+
 .scrolling-x {
     display: flex;
     overflow-x: auto;
@@ -60,4 +58,8 @@ p {
 
 .scrolling-x::-webkit-scrollbar-thumb:hover {
     background: none;
+}
+
+article p {
+    margin: 0.5rem 0;
 }

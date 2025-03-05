@@ -1,5 +1,5 @@
 <section class="book-list-x masterpiece-list">
-    <h2 class="list-title">神作榜</h2>
+    <h2 class="list-title">五星好书</h2>
     <ul class="book-list scrolling-x">
         {{ range where .Site.RegularPages "Params.star" "eq" 5 }} {{partial
         "book-item.html" .}} {{ end }}

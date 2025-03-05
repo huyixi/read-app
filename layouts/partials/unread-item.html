@@ -54,7 +54,7 @@
         </div>
 
         {{- if or .Params.recommender .Params.recommendation -}}
-        <div class="book-item-info bg-gray-200 p-6">
+        <div class="book-item-info bg-gray-200 p-4">
             {{- with .Params.recommender -}}
             <p class="book-item-recommander">{{.}}推荐：</p>
             {{- end -}} {{- with .Params.recommendation -}}
