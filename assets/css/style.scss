@@ -46,3 +46,18 @@ p {
         scroll-snap-align: start;
     }
 }
+.scrolling-x::-webkit-scrollbar {
+    height: 0;
+}
+
+.scrolling-x::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+
+.scrolling-x::-webkit-scrollbar-thumb {
+    border-radius: 0;
+}
+
+.scrolling-x::-webkit-scrollbar-thumb:hover {
+    background: none;
+}
