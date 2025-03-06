@@ -2,6 +2,7 @@
     <h2 class="list-title">读过的书</h2>
     <ul class="book-list scrolling-x">
         {{ range first 10 (where (where .Site.RegularPages "Section" "books")
-        "Params.star" "!=" 0) }} {{ partial "book-item.html" . }} {{ end }}
+        "Params.star" "!=" 0) }} {{ partial "book-item.html" (dict "Page" .
+        "Params" (dict "show_date" true)) }}{{ end }}
     </ul>
 </section>

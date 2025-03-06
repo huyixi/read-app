@@ -1,8 +1,9 @@
-{{- with .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}}
-{{- $webpMobile := .Resize "300x webp q80" -}}
-{{- $jpegMobile := .Resize "300x jpeg q80" -}}
-{{- $webpDesktop := .Resize "600x webp q80" -}}
-{{- $jpegDesktop := .Resize "600x jpeg q80" -}}
+{{- $coverImage := .Resources.GetMatch "cover.{avif,webp,jpg,jpeg,png}" -}} {{-
+if $coverImage -}} {{- $webpMobile := $coverImage.Resize "300x webp q80" -}} {{-
+$jpegMobile := $coverImage.Resize "300x jpeg q80" -}} {{- $webpDesktop :=
+$coverImage.Resize "600x webp q80" -}} {{- $jpegDesktop := $coverImage.Resize
+"600x jpeg q80" -}} {{- $title := .Title | default $.Page.Title | plainify -}}
+
 <div class="book-cover" style="width: 108px; height: 156px">
     <picture>
         <source
@@ -27,14 +28,20 @@
         />
         <img
             class="book-item-cover-img"
-            style="width: 108px;height:156px"
+            style="width: 108px; height: 156px"
             fetchpriority="high"
             decoding="async"
-            src="{{$jpegDesktop.RelPermalink}}"
-            alt="{{.Title | default $.Page.Title | plainify}} 封面"
+            src="{{ $jpegDesktop.RelPermalink }}"
+            alt="{{ $title }} 封面"
             loading="lazy"
         />
     </picture>
     <span class="book-cover-decor"></span>
+</div>
+{{- else -}}
+<div class="book-cover placeholder-cover" style="width: 108px; height: 156px">
+    <div class="placeholder-text">
+        {{ .Title | default $.Page.Title | truncate 10 }}
+    </div>
 </div>
 {{- end -}}
