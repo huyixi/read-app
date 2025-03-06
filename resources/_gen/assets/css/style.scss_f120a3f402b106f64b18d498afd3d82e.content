@@ -6,7 +6,9 @@
     margin: 0.4rem 0; }
 
 .book-cover {
-  position: relative; }
+  position: relative;
+  border-radius: 0 4px 4px 0;
+  overflow: hidden; }
 
 .book-cover-decor {
   position: absolute;
