@@ -25,6 +25,7 @@
     --color-gray-200: oklch(0.928 0.006 264.531);
     --color-gray-300: oklch(0.872 0.01 258.338);
     --color-gray-600: oklch(0.446 0.03 256.802);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
@@ -236,9 +237,6 @@
   }
   .isolate {
     isolation: isolate;
-  }
-  .z-3 {
-    z-index: 3;
   }
   .col-span-1 {
     grid-column: span 1 / span 1;
@@ -458,8 +456,8 @@
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
-  .bg-gray-200 {
-    background-color: var(--color-gray-200);
+  .bg-white {
+    background-color: var(--color-white);
   }
   .p-3 {
     padding: calc(var(--spacing) * 3);
@@ -603,9 +601,6 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
-  }
-  .\[hk\:xyS�\*rӗ\] {
-    hk: xyS�*rӗ;
   }
   .\[keywords\:node-addon-api\] {
     keywords: node-addon-api;

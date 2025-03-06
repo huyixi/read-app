@@ -13,7 +13,7 @@
         </div>
 
         {{- if .Params.recs -}}
-        <div class="book-item-info bg-gray-200 p-4">
+        <div class="book-item-info bg-white p-4">
             {{- $recommendCount := len .Params.recs -}} {{- if gt
             $recommendCount 0 -}} {{- $randomIndex := index (seq
             $recommendCount) (mod (now.Unix) $recommendCount) -}} {{-
