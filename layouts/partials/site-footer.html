@@ -1,10 +1,12 @@
-<div class="copyright inline-block group cursor-pointer max-w-[1200px]">
-    &copy; 2025{{ if ne now.Year 2025 }}-{{ now.Year }}{{ end }}
-    <span class="relative inline-block group">
-        <a href="https://huyixi.com"> {{ .Site.Params.author }}. </a>
-        <span
-            class="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-brand-primary)] group-hover:w-full transition-all duration-300 ease-out"
-        ></span>
-    </span>
-    保留所有权利。
-</div>
+<footer class="copyright max-w-[1200px] mx-auto">
+    <p class="cp-text inline-block group cursor-pointer">
+        &copy; 2025{{ if ne now.Year 2025 }}-{{ now.Year }}{{ end }}
+        <span class="relative inline-block group">
+            <a href="https://huyixi.com"> {{ .Site.Params.author }}. </a>
+            <span
+                class="absolute bottom-0 left-0 w-0 h-0.5 bg-[var(--color-brand-primary)] group-hover:w-full transition-all duration-300 ease-out"
+            ></span>
+        </span>
+        保留所有权利。
+    </p>
+</footer>
