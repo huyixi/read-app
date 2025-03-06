@@ -4,7 +4,7 @@ author: George Saunders
 date: 2025-03-05T09:26:49+08:00
 draft: false
 star: 0
-recommender: 魏小河
-recommendation: "这本《漫游在雨中池塘》也不是小说。它是一本讲解小说的书（关于写作，也关于阅读）。从1997年开始，乔治·桑德斯在大学里教了20多年十九世纪俄罗斯短篇小说。"
+recommender: "Ben Bunchannan"
+recommendation: "这本书以俄国民篇为例，做了现代的阅读和解析，他探讨了人对文学作品的现代诠释，我希望这类对文学对人性深度的品毒是人工智能无法轻易取代的，也许有一天AI也能做，但我希望这依然是我们的独有能力。"
 referrer: "https://mp.weixin.qq.com/s/LI0bj4D5T-3zvfntCTITGw"
 ---
