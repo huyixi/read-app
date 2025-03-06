@@ -3,6 +3,29 @@
     class="page-x px-8 py-12 md:p-4 max-w-[1200px] bg-[var(--color-bg-primary)]"
 >
     <h1 class="text-4xl mb-4">{{ .Title }}</h1>
+    {{- if .Params.recs -}}
+    <div
+        class="book-recommendations bg-gray-100 p-6 rounded-lg mb-8 border-l-4 border-gray-300"
+    >
+        {{- range .Params.recs -}}
+        <div
+            class="recommendation-item mb-6 last:mb-0 pb-6 last:pb-0 border-b last:border-0 border-gray-200"
+        >
+            {{- with .by -}}
+            <p class="font-bold text-lg">{{.}}推荐：</p>
+            {{- end -}} {{- with .quote -}}
+            <p class="text-lg italic my-2">{{.}}</p>
+            {{- end -}} {{- with .src -}}
+            <p class="text-sm text-gray-600">
+                <a href="{{.}}" target="_blank" rel="noopener" class="underline"
+                    >查看来源</a
+                >
+            </p>
+            {{- end -}}
+        </div>
+        {{- end -}}
+    </div>
+    {{- end -}}
     <article class="article-x text-xl">{{ .Content }}</article>
 </main>
 {{ end }}
