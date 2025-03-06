@@ -57,7 +57,8 @@
     );
     --font-body: JinKai, system-ui, sans-serif;
     --color-brand-primary: #a97f44;
-    --color-bg-primary: #f7f3e8;
+    --color-bg-primary: #f4f5f7;
+    --color-bg-secondary: #f7f3e8;
     --color-text-primary: #3a2221;
   }
 }
@@ -438,6 +439,9 @@
   }
   .bg-\[var\(--color-bg-primary\)\] {
     background-color: var(--color-bg-primary);
+  }
+  .bg-\[var\(--color-bg-secondary\)\] {
+    background-color: var(--color-bg-secondary);
   }
   .bg-\[var\(--color-brand-primary\)\] {
     background-color: var(--color-brand-primary);

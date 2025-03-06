@@ -1,5 +1,7 @@
 {{ define "main" }}
-<main class="page-x min-h-screen px-8 py-12 md:p-4">
+<main
+    class="page-x min-h-screen px-8 py-12 md:p-4 bg-[var(--color-bg-secondary)]"
+>
     <h1 class="text-4xl mb-4">{{ .Title }}</h1>
     {{- if .Params.recs -}}
     <div
