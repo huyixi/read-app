@@ -4,7 +4,7 @@ $jpegMobile := $coverImage.Resize "300x jpeg q80" -}} {{- $webpDesktop :=
 $coverImage.Resize "600x webp q80" -}} {{- $jpegDesktop := $coverImage.Resize
 "600x jpeg q80" -}} {{- $title := .Title | default $.Page.Title | plainify -}}
 
-<div class="book-cover" style="width: 108px; height: 156px">
+<div class="book-cover w-[108px] h-[156px]">
     <picture>
         <source
             media="(max-width: 600px)"
@@ -27,8 +27,7 @@ $coverImage.Resize "600x webp q80" -}} {{- $jpegDesktop := $coverImage.Resize
             type="image/jpeg"
         />
         <img
-            class="book-item-cover-img"
-            style="width: 108px; height: 156px"
+            class="book-item-cover-img w-[108px] h-[156px]"
             fetchpriority="high"
             decoding="async"
             src="{{ $jpegDesktop.RelPermalink }}"
@@ -39,7 +38,7 @@ $coverImage.Resize "600x webp q80" -}} {{- $jpegDesktop := $coverImage.Resize
     <span class="book-cover-decor"></span>
 </div>
 {{- else -}}
-<div class="book-cover placeholder-cover" style="width: 108px; height: 156px">
+<div class="book-cover placeholder-cover w-[108px] h-[156px]">
     <div class="placeholder-text">
         {{ .Title | default $.Page.Title | truncate 10 }}
     </div>

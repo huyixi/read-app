@@ -1,5 +1,4 @@
-{{/* 确定环境 - 适配两种调用方式 */}} {{- $page := . -}} {{- $params := dict -}}
-{{/* 如果传入的是带有 Page 属性的字典 */}} {{- if reflect.IsMap . -}} {{- if
+{{- $page := . -}} {{- $params := dict -}} {{- if reflect.IsMap . -}} {{- if
 .Page -}} {{- $page = .Page -}} {{- $params = .Params | default dict -}} {{- end
 -}} {{- end -}}
 
@@ -9,16 +8,17 @@
         class="inline-block text-ellipsis w-[108px] overflow-hidden"
     >
         {{ partial "book-cover" $page }}
+
         <p class="book-item-title truncate-1 mt-1">{{ $page.LinkTitle }}</p>
 
-        {{/* 显示日期 */}} {{ if $params.show_date }}
+        {{- /* 显示日期 */ -}} {{- if $params.show_date -}} {{- $date := or
+        $page.Params.read_date $page.Date -}}
         <p class="book-item-date text-sm text-gray-600">
-            {{ $date := $page.Date }} {{ with $page.Params.read_date }} {{ $date
-            = . }} {{ end }} {{ $date.Format "2006-01-02" }}
+            {{ $date.Format "2006-01-02" }}
         </p>
-        {{ end }} {{/* 显示作者 */}} {{ if $params.show_author }} {{ with
-        $page.Params.author }}
+        {{- end -}} {{- /* 显示作者 */ -}} {{- if $params.show_author -}} {{-
+        with $page.Params.author -}}
         <p class="book-item-author text-sm text-gray-600">{{ . }}</p>
-        {{ end }} {{ end }}
+        {{- end -}} {{- end -}}
     </a>
 </li>
