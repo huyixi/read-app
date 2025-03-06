@@ -237,6 +237,9 @@
   .isolate {
     isolation: isolate;
   }
+  .z-3 {
+    z-index: 3;
+  }
   .col-span-1 {
     grid-column: span 1 / span 1;
   }
@@ -356,6 +359,9 @@
   }
   .w-\[108px\] {
     width: 108px;
+  }
+  .max-w-\[600px\] {
+    max-width: 600px;
   }
   .max-w-\[1200px\] {
     max-width: 1200px;
@@ -597,6 +603,9 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+  }
+  .\[hk\:xyS�\*rӗ\] {
+    hk: xyS�*rӗ;
   }
   .\[keywords\:node-addon-api\] {
     keywords: node-addon-api;
