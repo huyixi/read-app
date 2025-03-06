@@ -56,6 +56,16 @@ article p {
   overflow: hidden;
   /* Hide overflow */ }
 
+.truncate-2 {
+  display: -webkit-box;
+  /* Use WebKit’s box layout */
+  -webkit-box-orient: vertical;
+  /* Arrange child elements vertically */
+  -webkit-line-clamp: 2;
+  /* Show specified number of lines */
+  overflow: hidden;
+  /* Hide overflow */ }
+
 .truncate-3 {
   display: -webkit-box;
   /* Use WebKit’s box layout */

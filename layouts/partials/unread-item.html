@@ -12,12 +12,19 @@
             </div>
         </div>
 
-        {{- if or .Params.recommender .Params.recommendation -}}
+        {{- if .Params.recommend -}}
         <div class="book-item-info bg-gray-200 p-4">
-            {{- with .Params.recommender -}}
-            <p class="book-item-recommander">{{.}}推荐：</p>
-            {{- end -}} {{- with .Params.recommendation -}}
-            <p class="book-item-recommand truncate-3">{{.}}</p>
+            {{- $recommendCount := len .Params.recommend -}} {{- if gt
+            $recommendCount 0 -}} {{- $randomIndex := index (seq
+            $recommendCount) (mod (now.Unix) $recommendCount) -}} {{-
+            $randomRecommend := index .Params.recommend (sub $randomIndex 1) -}}
+            <div>
+                {{- with $randomRecommend.recommender -}}
+                <p class="book-item-recommander">{{.}}推荐：</p>
+                {{- end -}} {{- with $randomRecommend.recommendation -}}
+                <p class="book-item-recommand truncate-2">{{.}}</p>
+                {{- end -}}
+            </div>
             {{- end -}}
         </div>
         {{- end -}}
