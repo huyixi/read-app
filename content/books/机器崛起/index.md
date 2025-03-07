@@ -6,7 +6,7 @@ draft: false
 star: 0
 recs:
   - by: "Ben Banchno"
-    quote: "最初只有即刻玩的那些机器，如何在七八十年代成为国家安全的重要工具。"
+    quote: "最初只有极客玩的那些机器，如何在七八十年代成为国家安全的重要工具。"
     referrer: ""
 
 ---
