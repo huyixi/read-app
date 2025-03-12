@@ -1,6 +1,6 @@
 {{ define "main" }}
-<main class="relative">
-    <div class="page min-h-screen max-w-[600px] mx-auto px-8 py-12 md:p-4">
+<main class="">
+    <div class="page  max-w-[600px] mx-auto px-8 py-12 md:p-4">
         <h1 class="text-4xl mb-8">{{ .Title }}</h1>
         {{- if .Params.recs -}}
         <div
@@ -31,6 +31,6 @@
         {{- end -}}
         <article class="article-x text-xl">{{ .Content }}</article>
     </div>
-    <div class="paper-bg absolute z-50"></div>
+    <div class="paper-bg"></div>
 </div>
 {{ end }}
