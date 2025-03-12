@@ -88,3 +88,16 @@ article p {
     width: calc(100vw - 3rem);
     max-width: 400px;
 }
+
+.paper-bg {
+    z-index: 998;
+    opacity: 0.3;
+    background-image: url("../images/paper.jpg");
+    background-position: 50%;
+    background-size: auto;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+}
