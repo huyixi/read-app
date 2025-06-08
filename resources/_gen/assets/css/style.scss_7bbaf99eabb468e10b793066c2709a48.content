@@ -1,0 +1,94 @@
+@charset "UTF-8";
+.book-list-x {
+  margin: 1rem 0; }
+  .book-list-x .list-title {
+    font-size: 1.4rem;
+    margin: 0.4rem 0; }
+
+.book-cover {
+  position: relative;
+  border-radius: 0 4px 4px 0;
+  overflow: hidden; }
+
+.book-cover-decor {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: linear-gradient(90deg, rgba(161, 161, 161, 0.25), rgba(21, 21, 20, 0.1) 1%, rgba(255, 255, 255, 0.15) 4%, rgba(148, 148, 148, 0.1) 8%, rgba(227, 227, 227, 0) 57%, rgba(222, 217, 217, 0.03) 91%, rgba(222, 217, 217, 0.05) 98%, rgba(255, 255, 255, 0.1));
+  box-shadow: inset 0 0 rgba(0, 0, 0, 0.1); }
+
+.book-cover-decor::after {
+  border-color: rgba(0, 0, 0, 0.1); }
+
+.scrolling-x {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem; }
+  .scrolling-x .scrolling-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start; }
+
+.scrolling-x::-webkit-scrollbar {
+  height: 0; }
+
+.scrolling-x::-webkit-scrollbar-track {
+  border-radius: 0; }
+
+.scrolling-x::-webkit-scrollbar-thumb {
+  border-radius: 0; }
+
+.scrolling-x::-webkit-scrollbar-thumb:hover {
+  background: none; }
+
+article p {
+  margin: 1rem 0; }
+
+.truncate-1 {
+  display: -webkit-box;
+  /* Use WebKit’s box layout */
+  -webkit-box-orient: vertical;
+  /* Arrange child elements vertically */
+  -webkit-line-clamp: 1;
+  /* Show specified number of lines */
+  overflow: hidden;
+  /* Hide overflow */ }
+
+.truncate-2 {
+  display: -webkit-box;
+  /* Use WebKit’s box layout */
+  -webkit-box-orient: vertical;
+  /* Arrange child elements vertically */
+  -webkit-line-clamp: 2;
+  /* Show specified number of lines */
+  overflow: hidden;
+  /* Hide overflow */ }
+
+.truncate-3 {
+  display: -webkit-box;
+  /* Use WebKit’s box layout */
+  -webkit-box-orient: vertical;
+  /* Arrange child elements vertically */
+  -webkit-line-clamp: 3;
+  /* Show specified number of lines */
+  overflow: hidden;
+  /* Hide overflow */ }
+
+.unread-item {
+  width: calc(100vw - 3rem);
+  max-width: 400px; }
+
+.paper-bg {
+  position: absolute;
+  z-index: -1;
+  opacity: 0.3;
+  background-image: url("../images/paper.jpg");
+  background-position: 50%;
+  background-size: auto;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%; }
