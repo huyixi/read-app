@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
     {{ partial "head.html" . }}
-    <body class="min-h-screen min-w-screen">
+    <body
+        class="min-h-screen min-w-screen {{ if .IsHome }}home{{ else if .IsPage }}page{{ else }}default{{ end }}"
+    >
         {{ block "main" . }} {{ end }}
     </body>
 </html>

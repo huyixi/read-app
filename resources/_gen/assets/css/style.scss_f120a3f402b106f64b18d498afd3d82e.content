@@ -1,4 +1,10 @@
 @charset "UTF-8";
+body.home {
+  background-color: var(--color-bg-primary); }
+
+body.page {
+  background-color: var(--color-bg-secondary); }
+
 .book-list-x {
   margin: 1rem 0; }
   .book-list-x .list-title {
