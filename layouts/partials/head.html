@@ -15,9 +15,15 @@
         href="/favicon/apple-touch-icon.png"
     />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-    {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
-    {{ end }}
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%q" type="%q" href="%q" title="%q" />
+    ` .Rel .MediaType.Type .Permalink site.Title | safeHTML }} {{ end }}
     <title>{{ .Page.Title }}</title>
     {{ partialCached "css.html" . }}
+    <link
+        rel="preload"
+        href="../images/paper.jpg"
+        as="image"
+        type="image/jpeg"
+    />
 </head>
